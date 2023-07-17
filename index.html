@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      content="Les petits plats, outil de recettes de cuisine"
+      name="description"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icones/icone.png" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Les petits plats</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="assets/icones/logo.svg"
+        class="header__logo"
+        alt="Logo : Les petits plats"
+      />
+      <section class="search">
+        <h1>
+          CHERCHEZ PARMI PLUS DE 1500 RECETTES <br />
+          DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
+        </h1>
+        <div class="search__input-group">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Rechercher une recette, un ingrédient,..."
+          />
+          <button class="search__button">
+            <img src="/assets/icones/LoopCTA.svg" alt="Search" />
+          </button>
+        </div>
+      </section>
+
+      <nav class="nav-bar">
+        <ul class="filter">
+            <li class="deroulant" id="">Ingrédients <span class="down"> <img role="button" src="assets/icones/Vector 1.png"   alt=""></span>
+              <ul class="sous">
+                <div  class="searchdrop">
+                <label for=""></label>
+                <input  type="text" >
+                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
+                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
+     
+                <li class=""><a href=""></a></li>
+                <li class=""><a href=""></a></li>
+              </div>
+              </ul>
+            </li>
+            <li class="deroulant" id="">Appareils <span class="down"><img src="assets/icones/Vector 1.png"  alt=""></span>
+              <ul class="sous">
+                <div class="searchdrop">
+                <label for=""></label>
+                <input  type="text">
+                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
+                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
+              </div>
+                <li class=""><a href=""></a></li>
+                <li class=""><a href=""></a></li>
+              </ul>
+            </li>
+            <li class="deroulant" id=""> <span class="down"> Ustensiles <img src="assets/icones/Vector 1.png"  alt=""> </span>
+              <ul class="sous">
+                <div class="searchdrop">
+                <label for=""></label>
+                <input type="text">
+                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
+                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
+                <li class=""><a href=""></a></li>
+                <li class=""><a href=""></a></li>
+              </div>
+              </ul>
+            </li>
+          </ul>
+          <div class="nbr-recette">
+            <h2>1500 recettes</h2>
+          </div>
+     
+      </nav>
+    </header>
+
+    <main>
+      <section id="recepes__cards">
+
+      <!-- </section>
+      <section class="logochapeau"><img class="logonex" src="assets/icones/icone.png" alt="">
+      <h1>Les petits plats</h1>
+    </section> -->
+    </main>
+    <script src="script/recipes.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/main.js"></script>
+  
+  </body>
+</html>
