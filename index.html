@@ -8,9 +8,12 @@
       content="Les petits plats, outil de recettes de cuisine"
       name="description"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +25,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>Les petits plats</title>
   </head>
+
   <body>
+    <!-- header -->
     <header class="header">
       <img
         src="assets/icones/logo.svg"
@@ -35,75 +40,156 @@
           DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
         </h1>
         <div class="search__input-group">
+          <label for="search-bar-input" class=""> </label>
           <input
             type="text"
+            id="search-bar-input"
             class="search__input"
             placeholder="Rechercher une recette, un ingrédient,..."
           />
+          <button class="deletesearch" >
+          
+          </button>
           <button class="search__button">
-            <img src="/assets/icones/LoopCTA.svg" alt="Search" />
+            <img class="loup" src="/assets/icones/LoopCTA.svg" alt="rechercher" />
           </button>
         </div>
       </section>
-
-      <nav class="nav-bar">
+      <!-- filtre par ingrédient, appareil, ustensile -->
+      <nav class="nav-bar" tabindex="0">
         <ul class="filter">
-            <li class="deroulant" id="">Ingrédients <span class="down"> <img role="button" src="assets/icones/Vector 1.png"   alt=""></span>
-              <ul class="sous">
-                <div  class="searchdrop">
-                <label for=""></label>
-                <input  type="text" >
-                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
-                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
-     
-                <li class=""><a href=""></a></li>
-                <li class=""><a href=""></a></li>
-              </div>
-              </ul>
-            </li>
-            <li class="deroulant" id="">Appareils <span class="down"><img src="assets/icones/Vector 1.png"  alt=""></span>
-              <ul class="sous">
-                <div class="searchdrop">
-                <label for=""></label>
-                <input  type="text">
-                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
-                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
-              </div>
-                <li class=""><a href=""></a></li>
-                <li class=""><a href=""></a></li>
-              </ul>
-            </li>
-            <li class="deroulant" id=""> <span class="down"> Ustensiles <img src="assets/icones/Vector 1.png"  alt=""> </span>
-              <ul class="sous">
-                <div class="searchdrop">
-                <label for=""></label>
-                <input type="text">
-                <button class="btnClose "><img src="assets/icones/Vector.svg" alt=""></button>
-                <button class="btnSearch"><img src="assets/icones/Group 4.svg" alt=""></button>
-                <li class=""><a href=""></a></li>
-                <li class=""><a href=""></a></li>
-              </div>
-              </ul>
-            </li>
-          </ul>
-          <div class="nbr-recette">
-            <h2>1500 recettes</h2>
-          </div>
-     
+          <li
+            class="deroulant"
+            tabindex="0"
+            role="dialog"
+            aria-label="liste des ingrédients"
+          >
+            Ingredients
+            <span class="down searchingredient">
+              <span class="fold"
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.svg"
+                  alt="chevron"
+              /></span>
+              <span class="open" 
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.png"
+                  alt="chevron"
+              /></span>
+            </span>
+            <ul class="sous" id="showIngredients">
+              <li class="searchdrop" id="ingrédientlist">
+                <label for="recherche-avancée-ingredient"></label>
+                <input
+                class="rechercheSecondaire"
+                  type="text"
+                  id="recherche-avancée-ingredient"
+                />
+                <button class="btnClose">
+                  <img src="assets/icones/Vector.png" alt="fermer" />
+                </button>
+                <button class="btnSearch">
+                  <img src="assets/icones/Group-4.svg" alt="search" />
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="deroulant"
+            tabindex="0"
+            role="dialog"
+            aria-label="liste des appareils"
+          >
+            Appareils
+            <span class="down searchingredient">
+              <span class="fold"
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.svg"
+                  alt="chevron"
+              /></span>
+              <span class="open"
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.png"
+                  alt="chevron"
+              /></span>
+            </span>
+            <ul class="sous" id="showAppareils">
+              <li class="searchdrop" id="appareilsList">
+                <label for="recherche-avancée-appareil"></label>
+                <input class="rechercheSecondaire" type="text" id="recherche-avancée-appareil" />
+                <button class="btnClose">
+                  <img src="assets/icones/Vector.png" alt="fermer" />
+                </button>
+                <button class="btnSearch">
+                  <img src="assets/icones/Group-4.svg" alt="search" />
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="deroulant"
+            tabindex="0"
+            role="dialog"
+            aria-label="liste des ustensiles"
+          >
+            <span class="down searchingredient">
+              Ustensiles
+              <span class="fold"
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.svg"
+                  alt="chevron"
+              /></span>
+              <span class="open"
+                ><img
+                  role="button"
+                  src="assets/icones/Vector-1.png"
+                  alt="chevron"
+              /></span>
+            </span>
+            <ul class="sous" id="showUstensiles">
+              <li class="searchdrop" id="ustensilesList">
+                <label for="recherche-avancée-ustensile"></label>
+                <input class="rechercheSecondaire" type="text" id="recherche-avancée-ustensile" />
+                <button class="btnClose">
+                  <img src="assets/icones/Vector.png" alt="fermer" />
+                </button>
+                <button class="btnSearch">
+                  <img src="assets/icones/Group-4.svg" alt="search" />
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nbr-recette">
+          <h2>1500 recettes</h2>
+        </div>
       </nav>
+  
     </header>
-
+    <!-- main affichage recettes et message d'alerte -->
     <main>
-      <section id="recepes__cards">
-
-      <!-- </section>
-      <section class="logochapeau"><img class="logonex" src="assets/icones/icone.png" alt="">
-      <h1>Les petits plats</h1>
-    </section> -->
+      <div class="filterBadge">
+        <ul class="filter-list">
+      
+        </ul>
+    </div>
+      <section id="recepes__cards" title="cardRecipes"></section>
+      <div id="alert-message" aria-hidden="true" class="hidden">
+        <p class="alert" role="alert">
+          Aucune recette ne correspond à votre critère... Vous pouvez chercher
+          "tarte aux pommes", "poisson", etc.
+        </p>
+      </div>
     </main>
     <script src="script/recipes.js"></script>
+    <script src="script/app.js"></script>
     <script src="script/index.js"></script>
     <script src="script/main.js"></script>
-  
+    <script src="script/dropDwon.js"></script>
   </body>
 </html>

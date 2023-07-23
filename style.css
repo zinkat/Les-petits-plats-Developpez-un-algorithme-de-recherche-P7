@@ -1,191 +1,180 @@
 :root {
-    --light-grey: #EDEDED;
-    --dark-grey: #7A7A7A;
-    --yellow: #FFD15B;
-    --black: #1B1B1B;
-    --fs-18: 18px;
-    --fs-12: 12px;
-    --br-5: 11px;
-  }
-  
-  * {
-    margin: 0 ;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: var(--light-grey);
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: var(--fs-18);
-    margin: auto;
-  }
-/*   
-  .logonex{width: 100px;
-     height: 100px;
-     margin-left: 400px;
-    }
-  .logochapeau h1{ 
-color: #d04f4f;
-  }
-  .logochapeau{
-    background-color: white;
-  } */
-  
-  /*** MAIN ***/
-  
-
-  
-  
-  /*** header section ***/
-  
-  .header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 690px;
-    flex-shrink: 0;
-    background-image: url(assets/images/lampos-aritonang-24gR_9lCdes-unsplash\ 1.png); 
-    background-repeat: no-repeat;
-  }
-  .header__logo {
-    width: 200px;
-    height: 25.261px;
-   position: relative;
-   top:-20%;
-   left: 5%;
-   z-index: 10px;
-  }
-  
-  /*** search section ***/
-  .search{
-   width: 100%;
-   position: relative;
-   top: 5%;
-  }
-  h1{
-    color: var(--yellow, #FFD15B);
-    text-align: center;
-    font-size: 2.5em;
-    font-style: normal;
-    font-weight:normal;
-    line-height: normal;
-      }
-  
-  .search__input-group {
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    width: 66.5%;
-  }
-  
-  .search__input {
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: var(--br-5);
-    color: var(--dark-grey);
-    font-size: 1em;
-    padding: 1.5rem;
-    width: 100%;
-    height: 72px;
-    margin-top: 1.5rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .search__input::placeholder {
-    color: var(--dark-grey);
-    opacity: 0.25;
-    font-size: var(--fs-18);
-  }
-  
-  .search__button {
-    background: transparent;
-    border: none;
-    position: absolute;
-    right: 8px;
-    top: 14px;
-    height: 100%;
-  }
-  /* nav bar */
-  .nav-bar {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    color: var(--black);
-    font-family: Manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    top: 35%;
-    margin: 0;
-  }
-  .nbr-recette{
-    align-items: center;
-    display: flex;
-  }
-  .nav-bar h2{
-    color: var(--black, #1B1B1B);
-    font-size: 21px;
-    font-style: normal;
-    font-family: Anton;
-    font-weight: 400;
- 
-    line-height: normal;
-    margin-right: 50px;
-  }
-  .filter{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 50px;
-    gap: 80px;
-    padding-left: 0px;
-  }
- /* .select-group{
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  
-  }
-select{
-  border:none;
-  border-radius: 5px;
-  width: 130px;
-  padding: 10px;
-} */
-
-nav ul{
-  list-style-type: none;
-
+  --light-grey: #ededed;
+  --dark-grey: #7a7a7a;
+  --yellow: #ffd15b;
+  --black: #1b1b1b;
+  --fs-18: 18px;
+  --fs-12: 12px;
+  --br-5: 11px;
 }
 
-nav ul li{
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-grey);
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--fs-18);
+  margin: auto;
+}
+
+
+/*** header section ***/
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 690px;
+  flex-shrink: 0;
+  background-image: url(assets/images/lampos-aritonang-24gR_9lCdes-unsplash\ 1.png);
+  background-repeat: no-repeat;
+}
+.header__logo {
+  width: 200px;
+  height: 25.261px;
+  position: relative;
+  top: -20%;
+  left: 5%;
+  z-index: 10;
+}
+
+/*** search section ***/
+.search {
+  width: 100%;
+  position: relative;
+  top: 5%;
+}
+h1 {
+  color: var(--yellow, #ffd15b);
+  text-align: center;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.search__input-group {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 66.5%;
+}
+
+.search__input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: var(--br-5);
+  color: var(--dark-grey);
+  font-size: 1.2em;
+  padding: 1.5rem;
+  width: 100%;
+  height: 72px;
+  margin-top: 1.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search__input::placeholder {
+  color: var(--dark-grey);
+  opacity: 0.25;
+  font-size: var(--fs-18);
+}
+
+.search__button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 0.5%;
+  top: 15%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.deletesearch{
+  background-color:transparent;
+  border: none;
+  position: absolute;
+  left:88%;
+  top: 52%; 
+cursor: pointer;
+}
+/* nav bar */
+.nav-bar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  color: var(--black);
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  top: 35%;
+  margin: 0;
+}
+.nbr-recette {
+  align-items: center;
+  display: flex;
+}
+.nav-bar h2 {
+  color: var(--black, #1b1b1b);
+  font-size: 21px;
+  font-style: normal;
+  font-family: Anton;
+  font-weight: 400;
+
+  line-height: normal;
+  margin-right: 50px;
+}
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 50px;
+  gap: 80px;
+  padding-left: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
   text-align: center;
   background-color: white;
   position: relative;
-  padding: 15px 20px 15px 15px;
+  padding: 15px 80px 15px 15px;
   border-radius: 5px;
+
 }
-#recepes__cards{
-margin: 100px 0 0 50px;
+nav  a{
+height:25px;
 }
-nav ul::after {
-content: "";
-display: table;
-clear: both;
+ nav li a:hover{
+  background-color: var(--yellow);
+}
+.deroulant{
+width: 200px;
 }
 
-nav a{
+nav ul::after {
+  display: table;
+  clear: both;
+}
+
+nav a {
   display: block;
   text-decoration: none;
   color: #000;
@@ -193,138 +182,209 @@ nav a{
   padding: 10px 0px;
 }
 
-
-.sous{
-display: none;
-box-shadow: 0px 1px 2px #ccc;
-background-color: white;
-margin: 10px 0 0 0;
-padding: 0;
-position: absolute;
-right: 0%;
-width: 100%; 
-z-index: 10000;
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #ccc;
+  background-color: white;
+  margin: 10px 0 0 0;
+  padding: 0;
+  position: absolute;
+  right: 0%;
+  width: 100%;
+  z-index: 10000;
 }
-.searchdrop input{
-  width: 80%;
-  height: 25px;
+
+.searchdrop input {
+  width: 95%;
+  height: 30px;
   border: 1px solid var(--light-grey);
-
+  border-radius: 5px;
+}
+.fold {
+  display: none;
 }
 
-nav> ul li:hover .sous{
-  display: block;
+.down .fold {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  margin-left: 4px;
+}
 
+.down .open {
+  position: absolute;
+  left: 85%;
+  top: 30%;
+  margin-left: 4px;
 }
-.down img{
-margin-left: 50px;
-}
-.sous li{
+
+.sous li {
   width: 100%;
   text-align: left;
   padding: 5px 5px 5px 15px;
 }
 
 .sous a {
-padding: 0;
-}
-
-.sousMenu{
-position: relative;
-left: 0;
-}
-
-.btnSearch{
-  background-color: white;
-  border: none;
-  position: absolute;
-  right: 12%;
-  top: 6%;
- 
- padding: 0;
-
-}
-
-.btnClose{
-  background-color: white;
-  border: none;
-  position: absolute;
-  right: 22%;
-  top: 6%;
   padding: 0;
-
 }
 
-#recepes__cards{
+.sousMenu {
+  position: relative;
+  left: 0;
+}
+
+.btnSearch {
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 8.5%;
+  top: 20%;
+  padding: 2px;
+  width: 20px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.btnClose {
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 19%;
+  top: 20%;
+  padding: 2px;
+  width: 20px;
+  height: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* main section & card recipes */
+main{
+  margin: 50px 0 0 50px;
+}
+
+.filterBadge{
+  padding: 20px;
+}
+
+
+.filterBadge ul li {
+  list-style-type: none;
+  padding-right: 0px;
+  font-size: 0.9em;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  background: #FFD15B;
+  padding-left: 0px;
+  align-items: center;
+  width: 200px;
+  display: inline-flex;
+  padding: 10px 12px;
+gap: 30px;
+}
+
+.filtered-btn {
+border: none;
+background: no-repeat  url(./assets/icones/VectorBadge.svg);
+width: 15px;
+height: 15px;
+text-align: center;
+z-index: 10;
+cursor: pointer;
+}
+
+#recepes__cards {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+ 
 }
-.card{
-width: 380px;
-height: 731px;
-flex-shrink: 0;
-border-radius: 21px;
-background: #FFF;
-box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.04);
-display: flex;
-flex-direction: column;
-
+.card {
+  width: 380px;
+  height: 731px;
+  flex-shrink: 0;
+  border-radius: 21px;
+  background: #fff;
+  box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
 }
-.detailPlat{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 20px;
-gap: 20px;
-
+.detailPlat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 20px 20px 20px;
+  gap: 20px;
 }
- a{
-text-decoration: none;
-
-  }
-.photoPlat img{
-object-fit: cover;
-width: 380px;
-height: 253px;
-flex-shrink: 0;
-border-top-left-radius: 21px;
-border-top-right-radius: 21px;
+a {
+  text-decoration: none;
+}
+.photoPlat img {
+  object-fit: cover;
+  width: 380px;
+  height: 253px;
+  flex-shrink: 0;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+}
+.photoPlat .badgeTime {
+  display: inline-flex;
+  padding: 5px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.badgeTime {
+  position: absolute;
+  top: -245px;
+  left: 77%;
+  border-radius: 14px;
+  background: var(--yellow, #ffd15b);
+  color: var(--black, #1b1b1b);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.recipeName{
+.recipeName {
   color: #000;
-font-family: Anton;
-font-size: 1.1em;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Anton;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.description{
-color: var(--black);
-font-family: Manrope;
-font-size: 0.87em;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-height: 93px;
-
-text-overflow: ellipsis;
-overflow: hidden;
-
+.description {
+  color: var(--black);
+  font-family: Manrope;
+  font-size: 0.87em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 110px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-h4{
+h4 {
   color: var(--dark-grey);
-font-family: Manrope;
-font-size: 0.6em;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: 1.08px;
-text-transform: uppercase;
+  font-family: Manrope;
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
 }
-.detailIngrédient{
+.detailIngrédient {
   display: flex;
   flex-wrap: wrap;
   padding: 0px;
@@ -332,30 +392,44 @@ text-transform: uppercase;
   width: 100%;
   gap: 10px;
 }
-.quantitéIngrédient{
+.quantitéIngrédient {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-padding: 0 0 0 0px;
+  padding: 0 0 0 0px;
 }
-.quantity, .unit{
+.quantity,
+.unit {
   font-size: 0.8em;
   color: var(--dark-grey);
-font-family: Manrope;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.ingrédientName{
-color: var(--black);
-font-family: Manrope;
-font-size: 0.8em;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-
+.ingrédientName {
+  color: var(--black);
+  font-family: Manrope;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.detailIngrédient  li{
-width: 40%;
+.detailIngrédient li {
+  width: 40%;
+}
+
+/*  alert message */
+#alert-message {
+  padding: 20px 20px 20px 80px;
+  background-color: var(--yellow);
+  width: 80%;
+  margin: 150px auto;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.hidden {
+  display: none;
+  text-align: center;
 }
