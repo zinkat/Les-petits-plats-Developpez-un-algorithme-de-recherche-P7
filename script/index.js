@@ -47,47 +47,6 @@ function displayRecipeCard(recipes) {
 
 }
 
-
-
-// function menuSelect(recipes) {
-//   const ingrédientelm = document.getElementById("ingrédientlist");
-//   const appareilElm = document.getElementById("appareilsList");
-//   const ustensilElm = document.getElementById("ustensilesList");
-//   recipes.map((recipe) => {
-//     const ingredients = recipe.ingredients;
-//     const appliance = recipe.appliance;
-//     const ustensils = recipe.ustensils;
-
-//     let ingredientList = "";
-//     ingredients.map((ingredient) => {
-//       allListIngredient = ingredient.ingredient;
-
-//       ingredientList += `
-// 	<li id="">
-// 		<a href="#"> ${allListIngredient}</a>
-// 	</li>
-// 	`;
-//     });
-
-//     let applianceList = "";
-//     applianceList += `
-// 	<li id="">
-//   <a href="#"> ${appliance}</a>	</li>
-//   `;
-
-//     let ustensilsList = "";
-//     ustensilsList += `
-// 	<li id="">
-// 	<a href="#"> ${ustensils}</a></li>
-// 	`;
-
-//     ingrédientelm.insertAdjacentHTML("afterend", ingredientList);
-//     appareilElm.insertAdjacentHTML("afterend", applianceList);
-//     ustensilElm.insertAdjacentHTML("afterend", ustensilsList);
-//   });
-// }
-// menuSelect(recipes);
-
 const ingrédientElm = document.getElementById("ingrédientlist");
 const appareilElm = document.getElementById("appareilsList");
 const ustensilElm = document.getElementById("ustensilesList");

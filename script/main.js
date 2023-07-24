@@ -2,6 +2,7 @@
 const btnFilter = document.querySelectorAll(".open");
 const menuList = document.querySelectorAll(".sous");
 const btnFold = document.querySelectorAll(".fold"); 
+const selectOption =document.querySelectorAll(".deroulant")
 const showIngredients = document.getElementById("showIngredients");
 const showAppareils = document.getElementById("showAppareils");
 const showUstensiles = document.getElementById("showUstensiles");
@@ -52,7 +53,7 @@ function openDropDown() {
       }
     });
     
-    document.addEventListener("keydown", function (e) {
+    btnFilter[i].addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
         menuList[i].style.display = "block";
         btnFilter[i].style.display = "none";

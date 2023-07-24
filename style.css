@@ -162,9 +162,12 @@ nav ul li {
 nav  a{
 height:25px;
 }
- nav li a:hover{
+ nav li .allIngredients:hover,
+ nav li .allAppliance:hover,
+ nav li .allUstensiles:hover{
   background-color: var(--yellow);
 }
+
 .deroulant{
 width: 200px;
 }
@@ -265,9 +268,12 @@ main{
 }
 
 .filterBadge{
-  padding: 20px;
+  padding: 20px 0px;
 }
+.filter-list{
+  padding: 0px;
 
+}
 
 .filterBadge ul li {
   list-style-type: none;
@@ -283,16 +289,16 @@ main{
   align-items: center;
   width: 200px;
   display: inline-flex;
-  padding: 10px 12px;
-gap: 30px;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+ gap: 10%;
 }
 
 .filtered-btn {
 border: none;
 background: no-repeat  url(./assets/icones/VectorBadge.svg);
-width: 15px;
-height: 15px;
-text-align: center;
+width: 12px;
+height: 12px;
 z-index: 10;
 cursor: pointer;
 }
