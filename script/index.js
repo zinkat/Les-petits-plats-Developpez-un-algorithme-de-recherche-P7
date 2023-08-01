@@ -1,3 +1,5 @@
+let allRecipes = [];
+allRecipes = [...recipes];
 //affichage des recettes dans la page d'accueil
 function displayRecipeCard(recipes) {
   let RecipeCard = "";
@@ -10,8 +12,8 @@ function displayRecipeCard(recipes) {
         ingredient.unit === "grammes"
           ? ingredient.unit.replace("grammes", "g")
           : ingredient.unit !== undefined
-            ? ingredient.unit
-            : "";
+          ? ingredient.unit
+          : "";
 
       let quantityValue =
         ingredient.quantity !== undefined ? ` ${ingredient.quantity} ` : "";
@@ -44,9 +46,9 @@ function displayRecipeCard(recipes) {
 	 `;
   });
   document.getElementById("recepes__cards").innerHTML = RecipeCard;
-
 }
 
+///création des menus déroulants
 const ingrédientElm = document.getElementById("ingrédientlist");
 const appareilElm = document.getElementById("appareilsList");
 const ustensilElm = document.getElementById("ustensilesList");
@@ -58,7 +60,7 @@ let ustensilsListArray = [];
 // Liste Ingrédients
 function ingredientsList(recipes) {
   let allIngredients = [];
-
+  //console.clear();
   recipes.map((recipe) => {
     recipe.ingredients.map((ingredients) => {
       const ingredient = ingredients.ingredient;
@@ -67,7 +69,7 @@ function ingredientsList(recipes) {
     });
   });
   ingredientsListArray = [...new Set(allIngredients)];
-
+  //console.log(ingredientsListArray);
   ingredientsListFiltred(ingredientsListArray);
 }
 
@@ -80,11 +82,11 @@ function ingredientsListFiltred(ingredientsListArray) {
         <a href="#" class= "allItems" arial-label="Rechercher des recettes avec l'ingrédient: '${item}'" data-value="${item}" onclick= "addNewItem(event)" >
             ${item}
         </a>
-      </li>
+      </li>  
         `
     )
     .join("");
-  ingrédientElm.insertAdjacentHTML("afterend", newListIngredient);
+  ingrédientElm.innerHTML = newListIngredient;
 }
 
 // Liste Appliances
@@ -113,7 +115,7 @@ function appliancesListFiltred(appliancesListArray) {
         `
     )
     .join("");
-  appareilElm.insertAdjacentHTML("afterend", newListAppliance);
+  appareilElm.innerHTML = newListAppliance;
 }
 
 // Liste  Ustensils
@@ -124,7 +126,6 @@ function ustensilsList(recipes) {
     const ustensils = recipes.ustensils;
 
     ustensils.map((ustensils) => {
-     // const ustensil = ustensils.ustensil;
       allUstensils.push(ustensils);
     });
   });
@@ -141,10 +142,25 @@ function ustensilsListFiltred(ustensilsListArray) {
 	        ${item}
         </a>
       </li>
-          `
+    `
     )
+
     .join("");
-  ustensilElm.insertAdjacentHTML("afterend", newListUstensil);
+  ustensilElm.innerHTML = newListUstensil;
+}
+const totalRecipes = document.getElementById("totalRecipes");
+let totalCard = document.getElementsByClassName("card");
+
+function numberRecipesFound(totalCard) {
+  if (totalCard.length <= 9) {
+    totalRecipes.innerHTML = `0${totalCard.length} recettes`;
+console.log(totalCard.length);
+    if (totalCard.length == 1) {
+      totalRecipes.innerHTML = `0${totalCard.length} recette`;
+    }
+  } else {
+    totalRecipes.innerHTML = "1500 recettes";
+  }
 }
 
-init()
+init();
