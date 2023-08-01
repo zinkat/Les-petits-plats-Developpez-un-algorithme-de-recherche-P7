@@ -1,9 +1,8 @@
-function init (){
-
-    displayRecipeCard(recipes);
-    ingredientsList(recipes);
-    appliancesList(recipes);
-    ustensilsList(recipes);
-    
+function init() {
+  displayRecipeCard(allRecipes);
+  ingredientsList(allRecipes);
+  appliancesList(allRecipes);
+  ustensilsList(allRecipes);
+  filteredItemArray = [];
+  totalRecipes.innerHTML = "1500 recettes";
 }
-

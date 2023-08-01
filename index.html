@@ -47,23 +47,20 @@
             class="search__input"
             placeholder="Rechercher une recette, un ingrédient,..."
           />
-          <button class="deletesearch" >
-          
-          </button>
+          <button class="deletesearch"></button>
           <button class="search__button">
-            <img class="loup" src="/assets/icones/LoopCTA.svg" alt="rechercher" />
+            <img
+              class="loup"
+              src="/assets/icones/LoopCTA.svg"
+              alt="rechercher"
+            />
           </button>
         </div>
       </section>
       <!-- filtre par ingrédient, appareil, ustensile -->
       <nav class="nav-bar" tabindex="0">
         <ul class="filter">
-          <li
-            class="deroulant"
-            tabindex="0"
-            role="dialog"
-            aria-label="liste des ingrédients"
-          >
+          <li class="deroulant" tabindex="0" aria-label="liste des ingrédients">
             Ingredients
             <span class="down searchingredient">
               <span class="fold"
@@ -80,10 +77,10 @@
               /></span>
             </span>
             <ul class="sous" id="showIngredients">
-              <li class="searchdrop" id="ingrédientlist">
+              <li class="searchdrop">
                 <label for="recherche-avancée-ingredient"></label>
                 <input
-                class="rechercheSecondaire"
+                  class="rechercheSecondaire"
                   type="text"
                   id="recherche-avancée-ingredient"
                 />
@@ -94,14 +91,10 @@
                   <img src="assets/icones/Group-4.svg" alt="search" />
                 </button>
               </li>
+              <li id="ingrédientlist"></li>
             </ul>
           </li>
-          <li
-            class="deroulant"
-            tabindex="0"
-            role="dialog"
-            aria-label="liste des appareils"
-          >
+          <li class="deroulant" tabindex="0" aria-label="liste des appareils">
             Appareils
             <span class="down searchingredient">
               <span class="fold"
@@ -118,9 +111,13 @@
               /></span>
             </span>
             <ul class="sous" id="showAppareils">
-              <li class="searchdrop" id="appareilsList">
+              <li class="searchdrop">
                 <label for="recherche-avancée-appareil"></label>
-                <input class="rechercheSecondaire" type="text" id="recherche-avancée-appareil" />
+                <input
+                  class="rechercheSecondaire"
+                  type="text"
+                  id="recherche-avancée-appareil"
+                />
                 <button class="btnClose">
                   <img src="assets/icones/Vector.png" alt="fermer" />
                 </button>
@@ -128,14 +125,10 @@
                   <img src="assets/icones/Group-4.svg" alt="search" />
                 </button>
               </li>
+              <li id="appareilsList"></li>
             </ul>
           </li>
-          <li
-            class="deroulant"
-            tabindex="0"
-            role="dialog"
-            aria-label="liste des ustensiles"
-          >
+          <li class="deroulant" tabindex="0" aria-label="liste des ustensiles">
             <span class="down searchingredient">
               Ustensiles
               <span class="fold"
@@ -152,9 +145,13 @@
               /></span>
             </span>
             <ul class="sous" id="showUstensiles">
-              <li class="searchdrop" id="ustensilesList">
+              <li class="searchdrop">
                 <label for="recherche-avancée-ustensile"></label>
-                <input class="rechercheSecondaire" type="text" id="recherche-avancée-ustensile" />
+                <input
+                  class="rechercheSecondaire"
+                  type="text"
+                  id="recherche-avancée-ustensile"
+                />
                 <button class="btnClose">
                   <img src="assets/icones/Vector.png" alt="fermer" />
                 </button>
@@ -162,23 +159,21 @@
                   <img src="assets/icones/Group-4.svg" alt="search" />
                 </button>
               </li>
+              <li id="ustensilesList"></li>
             </ul>
           </li>
         </ul>
         <div class="nbr-recette">
-          <h2>1500 recettes</h2>
+          <h2 id="totalRecipes"></h2>
         </div>
       </nav>
-  
     </header>
     <!-- main affichage recettes et message d'alerte -->
     <main>
       <div class="filterBadge">
-        <ul class="filter-list">
-      
-        </ul>
-    </div>
-      <section id="recepes__cards" title="cardRecipes"></section>
+        <ul class="filter-list"></ul>
+      </div>
+      <section id="recepes__cards"></section>
       <div id="alert-message" aria-hidden="true" class="hidden">
         <p class="alert" role="alert">
           Aucune recette ne correspond à votre critère... Vous pouvez chercher
