@@ -146,4 +146,5 @@ function cleanInput() {
   btnSearchGlobal.innerHTML = `
   <img class="loup" src="./assets/icones/loopCTA.svg" alt="rechercher"/>
   `;
+  displayAllArraysFiltred(recipes)
 }
