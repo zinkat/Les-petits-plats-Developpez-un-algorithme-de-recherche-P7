@@ -30,6 +30,7 @@ function displayFiltereditem() {
   containerFilter.innerHTML = newItem;
 }
 // event delete tag
+
 function deleteFiltredItem(index) {
   //console.log(index);
   filteredItemArray.splice(index, 1);

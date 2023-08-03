@@ -106,7 +106,7 @@ for (let i = 0; i < btlclose.length; i++) {
     inputDrop.forEach((element) => {
       element.value = "";
       btlclose[i].style.display = "none";
-
+      displayAllArraysFiltred(recipes);
     });
   }
 }
@@ -146,4 +146,5 @@ function cleanInput() {
   btnSearchGlobal.innerHTML = `
   <img class="loup" src="./assets/icones/loopCTA.svg" alt="rechercher"/>
   `;
+  displayAllArraysFiltred(recipes)
 }

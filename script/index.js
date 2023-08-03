@@ -154,11 +154,16 @@ let totalCard = document.getElementsByClassName("card");
 function numberRecipesFound(totalCard) {
   if (totalCard.length <= 9) {
     totalRecipes.innerHTML = `0${totalCard.length} recettes`;
-console.log(totalCard.length);
-    if (totalCard.length == 1) {
+  }
+   else if (totalCard.length == 1) {
       totalRecipes.innerHTML = `0${totalCard.length} recette`;
     }
-  } else {
+    else if (totalCard.length >= 10 || totalCard.length <= 50 ){
+      totalRecipes.innerHTML = `${totalCard.length} recettes`;
+    }
+ 
+   if( inputSearchGlobal.value == ""){
+    console.log("coco");
     totalRecipes.innerHTML = "1500 recettes";
   }
 }

@@ -25,7 +25,6 @@ body {
   margin: auto;
 }
 
-
 /*** header section ***/
 
 .header {
@@ -99,13 +98,13 @@ h1 {
   cursor: pointer;
 }
 
-.deletesearch{
-  background-color:transparent;
+.deletesearch {
+  background-color: transparent;
   border: none;
   position: absolute;
-  left:88%;
-  top: 52%; 
-cursor: pointer;
+  left: 88%;
+  top: 52%;
+  cursor: pointer;
 }
 /* nav bar */
 .nav-bar {
@@ -157,19 +156,27 @@ nav ul li {
   position: relative;
   padding: 15px 80px 15px 15px;
   border-radius: 5px;
-
 }
-nav  a{
-height:25px;
+nav a {
+  height: 30px;
 }
- nav li .allIngredients:hover,
- nav li .allAppliance:hover,
- nav li .allUstensiles:hover{
+nav li .allIngredients:hover,
+nav li .allAppliance:hover,
+nav li .allUstensiles:hover {
   background-color: var(--yellow);
 }
 
-.deroulant{
-width: 200px;
+#showIngredients,
+#showAppareils,
+#showUstensiles {
+  max-height: 300px;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  font-size: 0.9em;
+}
+
+.deroulant {
+  width: 200px;
 }
 
 nav ul::after {
@@ -261,18 +268,16 @@ nav a {
   display: none;
 }
 
-
 /* main section & card recipes */
-main{
+main {
   margin: 50px 0 0 50px;
 }
 
-.filterBadge{
+.filterBadge {
   padding: 20px 0px;
 }
-.filter-list{
+.filter-list {
   padding: 0px;
-
 }
 
 .filterBadge ul li {
@@ -284,30 +289,29 @@ main{
   font-weight: 400;
   line-height: normal;
   border-radius: 10px;
-  background: #FFD15B;
+  background: #ffd15b;
   padding-left: 0px;
   align-items: center;
   width: 200px;
   display: inline-flex;
   justify-content: space-evenly;
   padding: 10px 10px;
- gap: 10%;
+  gap: 10%;
 }
 
 .filtered-btn {
-border: none;
-background: no-repeat  url(./assets/icones/VectorBadge.svg);
-width: 12px;
-height: 12px;
-z-index: 10;
-cursor: pointer;
+  border: none;
+  background: no-repeat url(./assets/icones/VectorBadge.svg);
+  width: 12px;
+  height: 12px;
+  z-index: 10;
+  cursor: pointer;
 }
 
 #recepes__cards {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
- 
 }
 .card {
   width: 380px;
@@ -376,8 +380,9 @@ a {
   font-weight: 400;
   line-height: normal;
   height: 110px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  /* overflow:hidden; */
+  overflow-y: auto;
 }
 
 h4 {
