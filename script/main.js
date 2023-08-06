@@ -106,7 +106,6 @@ for (let i = 0; i < btlclose.length; i++) {
     inputDrop.forEach((element) => {
       element.value = "";
       btlclose[i].style.display = "none";
-      displayAllArraysFiltred(recipes);
     });
   }
 }
@@ -115,7 +114,6 @@ for (let i = 0; i < btlclose.length; i++) {
 
 const btnSearchGlobal = document.querySelector(".search__button");
 const imgloupSearch = document.querySelector(".loup");
-const inputSearchGlobal = document.getElementById("search-bar-input");
 const deleteButton = document.querySelector(".deletesearch");
 
 //event bouton loup de la barre de recherche principal
@@ -140,11 +138,13 @@ function showDeleteButton() {
 
 //event barre de recherche principal onclick sur le X vider le input
 deleteButton.addEventListener("click", cleanInput);
+
 function cleanInput() {
   inputSearchGlobal.value = "";
   deleteButton.innerHTML = "";
   btnSearchGlobal.innerHTML = `
   <img class="loup" src="./assets/icones/loopCTA.svg" alt="rechercher"/>
   `;
-  displayAllArraysFiltred(recipes)
+  displayAllArraysFiltred(recipes);
+  location.reload();
 }
