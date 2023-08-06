@@ -1,9 +1,10 @@
 const listAllItems = document.querySelectorAll(".allItems");
-const containerFilter = document.querySelector(".filter-list"); //div d'affichage
+const containerFilter = document.querySelector(".filter-list");
 const filterItem = document.getElementsByClassName("itemFiltrer");
 
 let filteredItemArray = [];
 let filteredvalue;
+
 ///event pour afficher un element sous forme d'etiquette(tag)
 function addNewItem(event) {
   filteredvalue = event.target.dataset.value;
@@ -13,7 +14,15 @@ function addNewItem(event) {
   } else {
     filteredItemArray.push(filteredvalue);
     displayFiltereditem();
-    gestionRequeteparTags(); ////appel fonction recherche par menu déroulant pour actualiser l'affichage
+    gestionRequeteparTags();
+  }
+  if (totalCard.length == 1) {
+    totalRecipes.innerHTML = `0${totalCard.length} recette`;
+    console.log(totalCard.length);
+  } else if (totalCard.length <= 9) {
+    totalRecipes.innerHTML = `0${totalCard.length} recettes`;
+  } else if (totalCard.length >= 10 || totalCard.length <= 50) {
+    totalRecipes.innerHTML = `${totalCard.length} recettes`;
   }
 }
 
@@ -34,9 +43,8 @@ function displayFiltereditem() {
 function deleteFiltredItem(index) {
   //console.log(index);
   filteredItemArray.splice(index, 1);
-
   deleteInputValue();
-  cleanInput();
+  // cleanInput();
   displayFiltereditem();
   gestionRequeteparTags();
 }
