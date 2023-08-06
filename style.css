@@ -431,7 +431,7 @@ h4 {
   width: 40%;
 }
 
-/*  alert message */
+/*  empty stat message */
 #alert-message {
   padding: 20px 20px 20px 80px;
   background-color: var(--yellow);
